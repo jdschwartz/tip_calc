@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.josh.tipcalculator.MainActivity">
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tip Calculator"
+        android:textSize="40sp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/inputLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/titleView">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bill:"
+                android:textSize="30sp"/>
+            <EditText
+                android:id="@+id/inputBill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:textSize="30sp"
+                />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/inputLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/inputLayout1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diners:"
+            android:textSize="30sp"/>
+        <EditText
+            android:id="@+id/inputDiner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:inputType="numberDecimal"
+            android:textSize="30sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tipNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/inputLayout2"/>
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="25"
+        android:progress="15"
+        android:layout_below="@id/tipNum"/>
+
+    <CheckBox
+        android:id="@+id/SplitCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/seekBar"
+        android:text="Split Bill"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/tipButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/SplitCheck"
+        android:onClick="buttonPressed"/>
+    <TextView
+        android:id="@+id/Ttip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip:"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_below="@id/tipButton"/>
+    <TextView
+        android:id="@+id/Tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="atadsfadf"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_below="@id/tipButton"/>
+
+
+</RelativeLayout>
