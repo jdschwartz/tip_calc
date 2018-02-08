@@ -106,5 +106,22 @@
         android:gravity="center"
         android:layout_below="@id/tipButton"/>
 
+    <TextView
+        android:id="@+id/TTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_below="@id/Tip"/>
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LJFODJFLDJF"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_below="@id/Tip"/>
+
 
 </RelativeLayout>

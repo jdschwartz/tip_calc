@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private SeekBar tipPercent;
     private TextView tipNum;
     private TextView Tip;
+    private TextView Total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Tip = findViewById(R.id.Tip);
         tipNum = findViewById(R.id.tipNum);
         tipPercent = findViewById(R.id.seekBar);
+        Total = findViewById(R.id.Total);
         tipPercent.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
                     @Override
@@ -58,13 +60,19 @@ public class MainActivity extends AppCompatActivity {
         double people = Double.parseDouble(input2);
         double tipP = tipPercent.getProgress();
         double result;
+        double bTotal;
         if(billSplit.isChecked()){
             result = (Bill*(tipP/100))/people;
         }else{
             result = (Bill*(tipP/100));
 
         }
-       Tip.setText(result+"");
+        bTotal = Bill + result;
+        DecimalFormat fmat = new DecimalFormat("#.00");
+        fmat.format(result);
+        Tip.setText(result+"");
+        Total.setText(bTotal+"");
+
 
     }
 }
