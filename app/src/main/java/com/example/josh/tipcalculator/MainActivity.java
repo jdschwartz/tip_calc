@@ -62,16 +62,18 @@ public class MainActivity extends AppCompatActivity {
         double result;
         double bTotal;
         if(billSplit.isChecked()){
-            result = (Bill*(tipP/100))/people;
+            result = (Bill*(tipP/100));
+            bTotal = Bill + result;
+            bTotal = bTotal/people;
         }else{
             result = (Bill*(tipP/100));
+            bTotal = Bill + result;
 
         }
-        bTotal = Bill + result;
-        DecimalFormat fmat = new DecimalFormat("#.00");
-        fmat.format(result);
-        Tip.setText(result+"");
-        Total.setText(bTotal+"");
+
+
+        Tip.setText(String.format("%.2f",result));
+        Total.setText(String.format("%.2f",bTotal));
 
 
     }
